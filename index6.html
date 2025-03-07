@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+    rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: 'Amatic SC', cursive;
+      }
+
+      body{
+        overflow: hidden;
+      }
+
+      #box{
+        width: 800px;
+        height: 300px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .selectors{
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .selector{
+        width: 10px;
+        height: 10px;
+        display: block;
+        background: #fcf792;
+        margin: 2px;
+        opacity: 0.5;
+        transform: scale(2) translateY(300px);
+      }
+
+      h1, footer{
+        font-size: 5rem;
+        text-align: center;
+      }
+
+      h1{
+        transform: scale(2) translateX(-1000px);
+      }
+
+      footer{
+        transform: scale(1.5) translateX(1000px);
+      }
+    </style>
+  </head>
+  <body>
+
+  <div id="box">
+    <h1>Hello, world</h1>
+
+    <div class="selectors">
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+      <div class="selector"></div>
+    </div>
+
+    <footer>Bye, bitches!)</footer>
+  </div>
+
+    <script>
+      const tween = gsap.timeline({repeat: 0, repeatDelay: 1});
+
+      tween.to('h1',{
+        x: 0,
+        ease: 'bounce',
+        duration: 2,
+      })
+
+      tween.to('footer',{
+        x: 0,
+        ease: 'bounce',
+        duration: 2,
+      },'-=1')
+
+      tween.to('.selector',{
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        ease: 'bounce',
+        stagger: 0.05,
+      }, '-=3')
+
+
+      tween.to('h1',{
+        fontSize: "6rem",
+        color: '#f98dff',
+      }, '+=1')
+
+      tween.to('footer',{
+        rotation: -10,
+      }, '-=1')
+    </script>
+  </body>
+</html>
